@@ -1,2 +1,2 @@
 #!/bin/bash
-luajit main.lua
+/scratch/jz1672/torch/install/bin/th main.lua

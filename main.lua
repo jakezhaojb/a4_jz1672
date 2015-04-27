@@ -1,10 +1,8 @@
 --
-----  Copyright (c) 2014, Facebook, Inc.
-----  All rights reserved.
+----  Implementation of query_sentence and auxiliary functions
+----  By Jake Zhao
 ----
-----  This source code is licensed under the Apache 2 license found in the
-----  LICENSE file in the root directory of this source tree. 
-----
+--
 ok,cunn = pcall(require, 'fbcunn')
 if not ok then
     ok,cunn = pcall(require,'cunn')
@@ -24,6 +22,7 @@ require('nngraph')
 require('base')
 ptb = require('data')
 
+-- Some cmd parser, not needed in executation.
 cmd = torch.CmdLine()
 cmd:option('--submit', true, 'Testing mode.')
 cmd:option('--devid', 1, 'device id')
@@ -69,11 +68,14 @@ function submit_test()
   g_disable_dropout(model.rnns)
   g_replace_table(model.s[0], model.start_s)
   while true do
+     -- Load one character
      line = io.read("*line")
      if line == nil then
         break
      end
+     -- Conversion to CudaTensor
      local x = transfer_data(map(line, params.batch_size))
+     -- Forwarding
      _, model.s[1], pred = unpack(model.rnns[1]:forward({x[1], x[1], model.s[0]}))
      for i = 1, pred:size(2) do
         io.write(pred[1][i] .. ' ')
@@ -85,7 +87,8 @@ function submit_test()
   g_enable_dropout(model.rnns)
 end
 
-g_init_gpu({opt.devid})
+--g_init_gpu({opt.devid})
+-- Loading data, for vocabulary building
 state_train = {data=transfer_data(ptb.traindataset(params.batch_size))}
 state_valid =  {data=transfer_data(ptb.validdataset(params.batch_size))}
 print("Network parameters:")
