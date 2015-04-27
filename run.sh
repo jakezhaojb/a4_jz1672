@@ -1,8 +1,4 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=1:gpus=1:titan
-#PBS -l walltime=1:00:00
-#PBS -l mem=64GB
-#PBS -N Jake
 
 module load lua
 module load cuda/6.5.12
