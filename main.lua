@@ -50,7 +50,7 @@ local modelname = 'clstm'
 for k, v in pairs(params) do
    modelname = modelname .. '-' .. k .. '=' .. v
 end
-print(modelname)
+--print(modelname)
 
 model = {}
 
@@ -91,8 +91,8 @@ end
 -- Loading data, for vocabulary building
 state_train = {data=transfer_data(ptb.traindataset(params.batch_size))}
 state_valid =  {data=transfer_data(ptb.validdataset(params.batch_size))}
-print("Network parameters:")
-print(params)
+--print("Network parameters:")
+--print(params)
 local states = {state_train, state_valid}
 for _, state in pairs(states) do
  reset_state(state)
@@ -105,9 +105,10 @@ total_cases = 0
 ----
 if opt.submit then
    print("Starting testing.")
-   print("OK GO")
    io.flush()
-   local tmp = torch.load('/scratch/jakez/lstm/models/' .. 'model' .. '.t7b', 'binary')
+   io.write("OK GO\n")
+   io.flush()
+   local tmp = torch.load('/scratch/jz1672/lstm/models/' .. 'model' .. '.t7b', 'binary')
    model = tmp.model
    submit_test()
    os.exit(1)

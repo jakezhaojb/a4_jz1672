@@ -20,10 +20,4 @@ export LD_LIBRARY_PATH=$TORCHROOT/install/lib/lua/5.1:/home/jz1672/torch/torch-d
 export DYLD_LIBRARY_PATH=$TORCHROOT/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
 export LIBRARY_PATH=$TORCHROOT/install/lib:$LIBRARY_PATH
 
-#cd ~
-#mkdir -p Jake
-#cd Jake
-#cp -r /home/jz1672/submit .
-#cd submit
-
 /scratch/jz1672/torch/install/bin/th main.lua
