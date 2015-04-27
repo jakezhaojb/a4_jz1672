@@ -107,7 +107,7 @@ if opt.submit then
    print("Starting testing.")
    print("OK GO")
    io.flush()
-   local tmp = torch.load('/scratch/jakez/lstm/models/' .. modelname .. '.t7b', 'binary')
+   local tmp = torch.load('/scratch/jakez/lstm/models/' .. 'model' .. '.t7b', 'binary')
    model = tmp.model
    submit_test()
    os.exit(1)
