@@ -1,0 +1,18 @@
+jz1672
+/scratch/ts2387/a4/jz1672
+tput: No value for $TERM and no -T specified
+Flushing proc output until OK GO received
+ --  [0mwarning: fbcunn not found. Falling back to cunn[0m
+ --  [0mStarting testing.[0m
+ --  OK GO
+Start test loop
+0	Perplexity: 869508.015118	avgnll: 2.442086	fails: 0
+1000	Perplexity: 215.168726	avgnll: 0.959183	fails: 0
+2000	Perplexity: 169.458661	avgnll: 0.916537	fails: 0
+3000	Perplexity: 218.130184	avgnll: 0.961624	fails: 0
+4000	Perplexity: 196.632821	avgnll: 0.943096	fails: 0
+5000	Perplexity: 186.956952	avgnll: 0.934085	fails: 0
+6000	Perplexity: 187.411114	avgnll: 0.934519	fails: 0
+7000	Perplexity: 189.787801	avgnll: 0.936769	fails: 0
+8000	Perplexity: 180.463949	avgnll: 0.927773	fails: 0
+9000	Perplexity: 180.866169	avgnll: 0.928171	fails: 0

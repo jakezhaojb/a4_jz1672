@@ -1,0 +1,12 @@
+Generated char level test data? (would be a grave error)
+
+cd jz1672; git log --pretty=format:"%an, %ad : %s" -4
+jakezhaojb, Mon Apr 27 17:49:44 2015 -0400 : updates
+jakezhaojb, Mon Apr 27 17:49:28 2015 -0400 : add report
+jakezhaojb, Mon Apr 27 17:49:05 2015 -0400 : Submission
+jakezhaojb, Mon Apr 27 16:58:50 2015 -0400 : updates
+
+cd jz1672; git log --pretty=format:"%ad" -1
+Mon Apr 27 17:49:44 2015 -0400
+
+Last commit is in time

@@ -1,0 +1,31 @@
+# General comments and issues with running your submission
+Worked
+
+# Your test set score
+442000  Perplexity: 181.596003  avgnll: 0.928890        fails: 0
+Best of class
+
+# Your answer to the questions (no comment means correct)
++ Q1 No comparison with manual calculation.
++ Q2
++ Q3
++ Q4
++ Q5
++ Q6
++ Q7
+
+# Comments on your code
+You didn't check in your training code. But I'll ignore that.
+Test loop is fine.
+No need to keep batch_size tensor around.
+
+# Comments on your write-up
+Excellent
+
+# Grades
++ Test set performance (out of 25): 25
++ Questions            (out of 25): 25
++ Code                 (out of 25): 25
++ Write-up and effort  (out of 25): 25
++ Lateness deduction              :
++ TOTAL (out of 100):             : 100
